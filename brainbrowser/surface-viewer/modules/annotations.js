@@ -1,28 +1,4 @@
-/*
-* BrainBrowser: Web-based Neurological Visualization Tools
-* (https://brainbrowser.cbrain.mcgill.ca)
-*
-* Copyright (C) 2011
-* The Royal Institution for the Advancement of Learning
-* McGill University
-*
-* This program is free software: you can redistribute it and/or modify
-* it under the terms of the GNU Affero General Public License as
-* published by the Free Software Foundation, either version 3 of the
-* License, or (at your option) any later version.
-*
-* This program is distributed in the hope that it will be useful,
-* but WITHOUT ANY WARRANTY; without even the implied warranty of
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-* GNU Affero General Public License for more details.
-*
-* You should have received a copy of the GNU Affero General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
 
-/*
-* Author: Tarek Sherif <tsherif@gmail.com> (http://tareksherif.ca/)
-*/
 
 BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
   "use strict";
@@ -47,7 +23,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
     * ```
     *
     * If more than one model has been loaded, a **model_name**
-    * option can be provided to specify the model the vertex is 
+    * option can be provided to specify the model the vertex is
     * associated with.
     * ```js
     * viewer.annotations.add(1234, { hello: true }, {
@@ -65,7 +41,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
         position = viewer.getVertex(vertex, {
           model_name: options.model_name
         });
-        
+
         annotation = {
           data: data,
           model_name: model_name,
@@ -98,7 +74,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
     * ```
     *
     * If more than one model has been loaded, a **model_name**
-    * option can be provided to specify the model the vertex is 
+    * option can be provided to specify the model the vertex is
     * associated with.
     * ```js
     * viewer.annotations.get(1234, {
@@ -114,11 +90,11 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
 
       if (model_name) {
         annotation = annotations.get(model_name, vertex);
-        
+
         if (options.activate !== false) {
           viewer.annotations.activate(vertex, options);
         }
-        
+
         return annotation;
       } else {
         return null;
@@ -139,7 +115,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
     * ```
     *
     * If more than one model has been loaded, a **model_name**
-    * option can be provided to specify the model the vertex is 
+    * option can be provided to specify the model the vertex is
     * associated with.
     * ```js
     * viewer.annotations.remove(1234, {
@@ -184,7 +160,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
     /**
     * @doc function
     * @name viewer.annotations:activate
-    * @param {number} vertex The vertex number of the 
+    * @param {number} vertex The vertex number of the
     * annotation to activate.
     *
     * @description
@@ -194,7 +170,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
     * viewer.annotations.activate(1234);
     * ```
     * If more than one model has been loaded, a **model_name**
-    * option can be provided to specify the model the vertex is 
+    * option can be provided to specify the model the vertex is
     * associated with.
     * ```js
     * viewer.annotations.activate(1234, {
@@ -246,7 +222,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
     /**
     * @doc function
     * @name viewer.annotations:setMarkerOnColor
-    * @param {number} color Hex number representing color for 
+    * @param {number} color Hex number representing color for
     * active annotation markers.
     *
     * @description
@@ -262,7 +238,7 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
     /**
     * @doc function
     * @name viewer.annotations:setMarkerOffColor
-    * @param {number} color Hex number representing color for 
+    * @param {number} color Hex number representing color for
     * non-active annotation markers.
     *
     * @description
@@ -307,4 +283,3 @@ BrainBrowser.SurfaceViewer.modules.annotations = function(viewer) {
   }
 
 };
-
